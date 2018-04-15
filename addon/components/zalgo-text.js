@@ -24,7 +24,8 @@ export default Component.extend({
 
       for (let i = 0; i < numberOfCombiningCharacters; i++) {
         let combiningCharacter = Math.floor(Math.random() * (upperCombiningCharacterBoundary - lowerCombiningCharacterBoundary)) + lowerCombiningCharacterBoundary;
-        outputString += `&#${combiningCharacter};`;
+        combiningCharacter = `0${combiningCharacter.toString(16)}`;
+        combiningCharacter = String.fromCodePoint(parseInt(combiningCharacter, 16));
       }
     });
 
