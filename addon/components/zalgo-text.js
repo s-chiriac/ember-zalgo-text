@@ -23,7 +23,7 @@ export default Component.extend({
       let numberOfCombiningCharacters = Math.floor(Math.random() * 10) + 10;
 
       for (let i = 0; i < numberOfCombiningCharacters; i++) {
-        outputString += Math.floor(Math.random() * (upperCombiningCharacterBoundary - lowerCombiningCharacterBoundary)) + lowerCombiningCharacterBoundary;
+        outputString += '&#' + Math.floor(Math.random() * (upperCombiningCharacterBoundary - lowerCombiningCharacterBoundary)) + lowerCombiningCharacterBoundary + ';';
       }
     });
 
