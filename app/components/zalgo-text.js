@@ -1,0 +1,1 @@
+export { default } from 'ember-zalgo-text/components/zalgo-text';
