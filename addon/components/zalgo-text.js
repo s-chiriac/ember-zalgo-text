@@ -5,8 +5,8 @@ export default Component.extend({
   layout,
   classNames: ['ember-zalgo-text'],
 
-  didInsertElement() {
-    this._super(...arguments);
+  didReceiveAttrs(...args) {
+    this._super(...args);
 
     const lowerCombiningCharacterBoundary = 768;
     const upperCombiningCharacterBoundary = 879;
